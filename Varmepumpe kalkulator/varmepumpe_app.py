@@ -1,10 +1,15 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os  # NY LINJE
 
-st.set_page_config(page_title="Varmepumpekalkulator for næringsbygg", layout="wide")
+# Finn riktig sti til logoen
+current_dir = os.path.dirname(__file__)
+logo_path = os.path.join(current_dir, "logo.png")
 
-st.image(r"C:\\Users\\sande\\OneDrive\\Skrivebord\\Varmepumpe kalkulator\\logo.png", width=400)
+# Vis bildet
+st.image(logo_path, width=400)
+
 
 st.markdown("### Sander's VP kalkis")
 st.title("Varmepumpekalkulator for næringsbygg")
